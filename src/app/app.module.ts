@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { DashboardComponent } from './employees/employeedetail/dashboard/dashboard.component';
+import{HttpClientModule} from '@angular/common/http'
+import { EmployeesModule } from './employees/employees.module';
+import { EmployeeData } from './employees/employee-data';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    EmployeesModule,
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(EmployeeData)
   ],
   providers: [],
   bootstrap: [AppComponent]
