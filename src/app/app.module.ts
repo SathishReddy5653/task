@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './employees/employeedetail/dashboard/dashboard.component';
+import { DashboardComponent } from './employees/dashboard/dashboard.component';
 import{HttpClientModule} from '@angular/common/http'
 import { EmployeesModule } from './employees/employees.module';
 import { EmployeeData } from './employees/employee-data';

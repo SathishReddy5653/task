@@ -1,8 +1,12 @@
+<div>
+  <div>
+    <div class="container">
+      <div class="container">
 <div class="card">
   <div class="card-header">
     {{ pageTitle }}
   </div>
-
+<div class="container">
   <div class="card-body">
     <div class="table-responsive">
       <table class="table mb-0" *ngIf="employees && employees.length">
@@ -25,7 +29,6 @@
             <td>{{ employee.age }}</td>
             <td>{{ employee.country }}</td>
             <td>{{ employee.salary | currency: "INR":"symbol":"1.2-2" }}</td>
-            <td></td>
             <td>
               <button
                 class="btn btn-outline-primary btn-sm"
@@ -36,11 +39,16 @@
             </td>
           </tr>
         </tbody>
+  
       </table>
+    </div>
     </div>
   </div>
 </div>
 
 <div *ngIf="errorMessage" class="alert alert-danger">
   Error: {{ errorMessage }}
+</div>
+</div>
+</div>
 </div>
