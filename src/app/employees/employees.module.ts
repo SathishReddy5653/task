@@ -11,9 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      { path:'',component:DashboardComponent
-
-      },
+      { path: '', component: DashboardComponent },
       {
         path: 'employees',
         component: EmployeeslistComponent,

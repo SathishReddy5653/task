@@ -12,10 +12,7 @@ export class EmployeedetailComponent implements OnInit {
   employee: Employee | null = null;
   errorMessage = '';
 
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     const resolvedData: EmployeeResolved =

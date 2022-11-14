@@ -22,30 +22,20 @@ export class DataServiceService {
       return of(this.initializeEmployee());
     }
     const url = `${this.employeesUrl}/${id}`;
-    return this.http.get<Employee>(url)
-      .pipe(
-        tap(data => console.log('getEmployee: ' + JSON.stringify(data))),
-        catchError(this.handleError)
-      );
-      
+    return this.http.get<Employee>(url).pipe(
+      tap((data) => console.log('getEmployee: ' + JSON.stringify(data))),
+      catchError(this.handleError)
+    );
 
-
-
-
-
-
-
-
-
-  // getEmployee(id: number): Observable<Employee> {
-  //   if (id === 0) {
-  //     return of(this.initializeProduct());
-  //   }
-  //   const url = `${this.productsUrl}/${id}`;
-  //   return this.http.get<Employee>(url).pipe(
-  //     tap((data) => console.log('getProduct: ' + JSON.stringify(data))),
-  //     catchError(this.handleError)
-  //   );
+    // getEmployee(id: number): Observable<Employee> {
+    //   if (id === 0) {
+    //     return of(this.initializeProduct());
+    //   }
+    //   const url = `${this.productsUrl}/${id}`;
+    //   return this.http.get<Employee>(url).pipe(
+    //     tap((data) => console.log('getProduct: ' + JSON.stringify(data))),
+    //     catchError(this.handleError)
+    //   );
   }
 
   // createProduct(product: Product): Observable<Product> {
